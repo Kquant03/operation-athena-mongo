@@ -69,7 +69,7 @@ const LicensePage: React.FC = () => {
           <div className={styles.finePrint}>
               <p>
                 In simple terms: I'm not here for user credentials, a lot of that identification stuff serves no purpose in training an LLM. That's why there's not even a login page on this website. Also, Feel free to use, modify, and distribute this code however you like. 
-                Whether it's for personal projects, commercial use, or even world domination (we won't judge), 
+                Whether it's for personal projects, commercial use, or even world domination (Claude's suggestion, not mine), 
                 go ahead and make it your own. If you're curious about how we built this or want to create something similar, 
                 check out our source code here: {' '}
                 <a 
