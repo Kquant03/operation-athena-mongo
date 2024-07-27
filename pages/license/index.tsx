@@ -60,7 +60,7 @@ const LicensePage: React.FC = () => {
               go ahead and make it your own. If you're curious about how we built this or want to create something similar, 
               check out our source code here: {' '}
               <a 
-                href="https://github.com/Kquant03/operation-athena-public" 
+                href="https://github.com/Kquant03/project-athena-mongo" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={styles.linkHover}
