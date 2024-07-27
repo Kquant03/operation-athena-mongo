@@ -52,23 +52,6 @@ const LicensePage: React.FC = () => {
               OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
               SOFTWARE.
             </p>
-          </div>
-          <div className={styles.finePrint}>
-              <p>
-                In simple terms: Feel free to use, modify, and distribute this code however you like. 
-                Whether it's for personal projects, commercial use, or even world domination (we won't judge), 
-                go ahead and make it your own. If you're curious about how we built this or want to create something similar, 
-                check out our source code here: {' '}
-                <a 
-                  href="https://github.com/Kquant03/operation-athena-public" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={styles.linkHover}
-                >
-                  GitHub Repository
-                </a>
-                . Happy coding!
-              </p>
                 <p>
                   Please note that this website is hosted on Vercel, and Vercel logs certain user data, including user strings, 
                   which are accessible to the website owner. These user strings contain information such as browser versions, 
@@ -82,6 +65,23 @@ const LicensePage: React.FC = () => {
                     Privacy Policy
                   </a>.
                 </p>
+          </div>
+          <div className={styles.finePrint}>
+              <p>
+                In simple terms: Feel free to use, modify, and distribute this code however you like. 
+                Whether it's for personal projects, commercial use, or even world domination (we won't judge), 
+                go ahead and make it your own. If you're curious about how we built this or want to create something similar, 
+                check out our source code here: {' '}
+                <a 
+                  href="https://github.com/Kquant03/operation-athena-mongo/tree/main" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={styles.linkHover}
+                >
+                  GitHub Repository
+                </a>
+                . Happy coding!
+              </p>
             </div>
         </div>
       </div>
