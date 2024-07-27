@@ -6,4 +6,6 @@ It runs with npm install and then npm run dev. If you want to adopt something li
 
 MongoDB and Vercel for the win.
 
-![favicon](https://github.com/user-attachments/assets/e87c5799-4e08-49da-9801-319bbd3a77cd)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/be1984de-b60a-479c-9aca-24ddfa37d580" alt="favicon">
+</p>
