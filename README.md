@@ -6,6 +6,9 @@ It runs with npm install and then npm run dev. If you want to adopt something li
 
 MongoDB and Vercel for the win.
 
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/be1984de-b60a-479c-9aca-24ddfa37d580" alt="favicon">
+  <a href="https://operation-athena.repleteai.com/">
+    <img src="https://github.com/user-attachments/assets/be1984de-b60a-479c-9aca-24ddfa37d580" alt="favicon">
+  </a>
 </p>
