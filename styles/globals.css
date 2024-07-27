@@ -1,0 +1,78 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quantico:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --background-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --primary-color: #328abd;
+  --secondary-color: #328abd;
+  --accent-color: #ff3300;
+
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Quantico', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  background-image: url('../public/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  text-shadow: 0 0 5px #174763;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* Add any other global styles here */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input, textarea {
+  font-family: var(--font-body);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+}
+
+/* Futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

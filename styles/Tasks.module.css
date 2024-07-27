@@ -1,0 +1,41 @@
+/* styles/Tasks.module.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 32px;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: #ff0000;
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #00ff00;
+  color: #1a1a1a;
+}
+
+.loading {
+  text-align: center;
+  color: #54a8da;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}

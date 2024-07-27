@@ -1,0 +1,50 @@
+/* styles/ProjectInfo.module.css */
+.projectInfo {
+  position: relative;
+  padding: 2rem;
+  background-color: rgba(26, 26, 26, 0.8);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px #1d4b66;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectInfo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px #328abd;
+}
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .projectInfo h2 {
+    color: #328abd;
+    margin-bottom: 1rem;
+  }
+  
+  .projectInfo h3 {
+    color: #328abd;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .projectInfo p {
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .projectInfo ul {
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+  
+  .projectInfo li {
+    margin-bottom: 0.5rem;
+  }

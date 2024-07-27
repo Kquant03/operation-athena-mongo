@@ -1,0 +1,12 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.linkHover {
+  color: #54a8da;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
