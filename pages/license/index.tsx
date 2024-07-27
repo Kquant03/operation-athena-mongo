@@ -54,22 +54,35 @@ const LicensePage: React.FC = () => {
             </p>
           </div>
           <div className={styles.finePrint}>
-            <p>
-              In simple terms: Feel free to use, modify, and distribute this code however you like. 
-              Whether it's for personal projects, commercial use, or even world domination (we won't judge), 
-              go ahead and make it your own. If you're curious about how we built this or want to create something similar, 
-              check out our source code here: {' '}
-              <a 
-                href="https://github.com/Kquant03/project-athena-mongo" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className={styles.linkHover}
-              >
-                GitHub Repository
-              </a>
-              . Happy coding!
-            </p>
-          </div>
+              <p>
+                In simple terms: Feel free to use, modify, and distribute this code however you like. 
+                Whether it's for personal projects, commercial use, or even world domination (we won't judge), 
+                go ahead and make it your own. If you're curious about how we built this or want to create something similar, 
+                check out our source code here: {' '}
+                <a 
+                  href="https://github.com/Kquant03/operation-athena-public" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={styles.linkHover}
+                >
+                  GitHub Repository
+                </a>
+                . Happy coding!
+              </p>
+                <p>
+                  Please note that this website is hosted on Vercel, and Vercel logs certain user data, including user strings, 
+                  which are accessible to the website owner. These user strings contain information such as browser versions, 
+                  operating system names (e.g., Windows or Ubuntu), and browser base information (e.g., Gecko). This data is collected 
+                  for the purpose of troubleshooting and improving the website's functionality. No personally identifiable information 
+                  is collected through these user strings.
+                </p>
+                <p>
+                  For more information about Vercel's data practices, please refer to their {' '}
+                  <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className={styles.linkHover}>
+                    Privacy Policy
+                  </a>.
+                </p>
+            </div>
         </div>
       </div>
       </motion.div>
