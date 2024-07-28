@@ -112,7 +112,7 @@ const ContributeForm: React.FC<ContributeFormProps> = ({ onNewTask }) => {
         ></textarea>
       </div>
       <div className={styles.formGroup}>
-        <label htmlFor="example" className={styles.label}>Example:</label>
+        <label htmlFor="example" className={styles.label}>Example(s):</label>
         <textarea
           id="example"
           value={example}
