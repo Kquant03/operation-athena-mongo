@@ -9,5 +9,10 @@
         "buildCommand": "npm run build"
       }
     }
-  ]
+  ],
+  "functions": {
+    "pages/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  }
 }
