@@ -7,10 +7,10 @@ const ProjectInfo: React.FC = () => {
       <div className={styles.content}>
         <h2>About Operation Athena</h2>
         <p>
-          Operation Athena is a collaborative initiative focused on advancing artificial intelligence through the compilation and analysis of diverse reasoning tasks. Our goal is to create a comprehensive reference document that helps dataset creators and researchers improve AI reasoning skills.
+          Operation Athena is a collaborative initiative focused on advancing artificial intelligence through the compilation and analysis of diverse reasoning tasks. The original idea for this website came from Nous Research, as well as the majority of existing data in the current database, as of July 28th, 2024.
         </p>
         <p>
-          By bringing together a wide range of task categories, from mathematical word problems to identifying subtle inconsistencies, we aim to push the boundaries of AI capabilities and foster innovation in the field.
+          In the AI industry, there is a need for diverse datasets that can provide the full depth and complexity of human experience. So it's vital to make sure everyone has a chance to get their own ideas into these systems as a way of helping models deepen their understanding and ability to succeed at things in real-world applications.
         </p>
         <p>
           Join us in our mission to create a master list of reasoning tasks that will drive the development of more sophisticated and adaptable AI systems.
