@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <div className={styles.container}>
           <Head>
             <title>Operation Athena</title>
-            <meta name="description" content="Advancing AI through strategic benchmarking" />
+            <meta name="description" content="Curating Reasoning Tasks for LLMs" />
           </Head>
 
           <Hero />
