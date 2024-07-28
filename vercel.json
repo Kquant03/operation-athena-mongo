@@ -6,13 +6,11 @@
       "use": "@vercel/next",
       "config": {
         "installCommand": "npm install",
-        "buildCommand": "npm run build"
+        "buildCommand": "npm run build",
+        "api": {
+          "maxDuration": 30
+        }
       }
     }
-  ],
-  "functions": {
-    "pages/api/**/*.ts": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
