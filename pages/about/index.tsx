@@ -65,9 +65,11 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
         <footer className={styles.footer}>
-          <p className={styles.finePrint}>
-            If you need support with the website or have any questions, please contact me by email at <a href="mailto:kquant@repleteai.com">kquant@repleteai.com</a> or reach out to me on Discord at <a href="https://discord.gg/awyCNx3nnw" target="_blank" rel="noopener noreferrer">my server</a>.
-          </p>
+          <div className={styles.finePrintContainer}>
+            <p className={styles.finePrint}>
+              If you need support with the website or have any questions, please contact me by email at <a href="mailto:kquant@repleteai.com">kquant@repleteai.com</a> or reach out to me on Discord at <a href="https://discord.gg/awyCNx3nnw" target="_blank" rel="noopener noreferrer">my server</a>.
+            </p>
+          </div>
         </footer>
       </motion.div>
     </Layout>
