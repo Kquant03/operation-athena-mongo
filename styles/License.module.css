@@ -1,59 +1,110 @@
 /* styles/License.module.css */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 1rem;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  color: #54a8da;
+  transition: all 0.8s ease;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px #041620;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.licenseText {
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.licenseText p {
+  margin-bottom: 1rem;
+}
+
+.finePrint {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.finePrint a,
+.linkHover {
+  color: #54a8da;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.finePrint a:hover,
+.linkHover:hover {
+  text-decoration: underline;
+  color: #328abd;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    min-height: calc(100vh - 150px);
+    padding: 0.5rem;
   }
   
   .card {
-    background-color: #1a1a1a;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #333;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: rgba(26, 26, 26, 0.95);
   }
-
+  
   .card:hover {
-    color: #54a8da;
-    transition: all 0.8s ease;
-    background-color: #1a1a1a;
-    box-shadow: 0 4px 8px #041620;
+    transform: none;
+    box-shadow: none;
   }
   
   .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #f0f0f0;
-    text-align: center;
+    font-size: 1.5rem;
   }
   
   .description {
-    margin-bottom: 2rem;
-    color: #f0f0f0;
-    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
   
   .licenseText {
-    color: #f0f0f0;
-    line-height: 1.6;
-  }
-
-  .finePrint {
-    margin-top: 2rem;
     font-size: 0.9rem;
-    color: #666;
-    border-top: 1px solid #eaeaea;
-    padding-top: 1rem;
+    line-height: 1.5;
   }
   
-  .finePrint a {
-    color: #0070f3;
-    text-decoration: none;
+  .licenseText p {
+    margin-bottom: 0.75rem;
   }
   
-  .finePrint a:hover {
-    text-decoration: underline;
+  .finePrint {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
   }
+}

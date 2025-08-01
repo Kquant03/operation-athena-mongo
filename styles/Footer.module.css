@@ -5,8 +5,32 @@
   text-align: center;
 }
 
+.footer p {
+  margin: 0.5rem 0;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
 .linkHover {
   color: #54a8da;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.linkHover:hover {
+  color: #328abd;
+  text-decoration: underline;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .footer p {
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+  }
 }

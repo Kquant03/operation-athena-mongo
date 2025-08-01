@@ -13,6 +13,16 @@
   --font-mono: 'Share Tech Mono', monospace;
 }
 
+/* Mobile-first approach */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,6 +33,13 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Improve touch targets */
+button, a, input, textarea, select {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 a {
@@ -50,6 +67,7 @@ button {
   font-family: var(--font-body);
   cursor: pointer;
   transition: all 0.3s ease;
+  touch-action: manipulation;
 }
 
 input, textarea {
@@ -75,4 +93,36 @@ input, textarea {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
+}
+
+/* Responsive typography and mobile optimizations */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  body {
+    background-attachment: scroll; /* Fixed backgrounds can cause performance issues on mobile */
+  }
+  
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
+  
+  /* Touch-friendly scrollbar for mobile */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 1rem;
 }
 
 .popup {
@@ -17,6 +18,7 @@
   border-radius: 10px;
   backdrop-filter: blur(5px);
   max-width: 500px;
+  width: 100%;
   text-align: center;
   color: white;
 }
@@ -29,6 +31,7 @@
 
 .textWrapper {
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .titleWrapper {
@@ -66,6 +69,7 @@
 .taskId span {
   color: #328abd;
   font-weight: bold;
+  word-break: break-all;
 }
 
 .buttonContainer {
@@ -87,6 +91,7 @@
   letter-spacing: 0.1em;
   background-color: rgba(0, 0, 0, 0.6);
   margin: 10px;
+  min-width: 100px;
 }
 
 .viewTaskButton:hover {
@@ -102,4 +107,68 @@
   background-color: rgba(0, 0, 0, 0);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px #ff4d4d;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 0.5rem;
+  }
+  
+  .popup {
+    padding: 1.5rem;
+    max-width: calc(100% - 2rem);
+    border-radius: 8px;
+  }
+  
+  .titleWrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .message {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .taskId {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .taskId span {
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .viewTaskButton,
+  .closeButton {
+    width: 100%;
+    margin: 0;
+    padding: 12px 15px;
+  }
+  
+  .viewTaskButton:active,
+  .closeButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
 }

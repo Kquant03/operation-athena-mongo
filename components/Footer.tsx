@@ -13,7 +13,7 @@ const Footer = () => {
       <p>
         &copy; Made with Anthropic&apos;s{' '}
         <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" className={styles.linkHover}>
-          Claude 3 Opus and Sonnet 3.5
+          Claude 3 Opus, 4 Opus and Sonnet 3.5
         </a>
         .
       </p>

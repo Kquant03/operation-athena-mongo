@@ -14,26 +14,15 @@ interface Task {
   tags?: string[];
 }
 
-interface Task {
-  _id: string;
-  title?: string;
-  category?: string;
-  description?: string;
-  example?: string;
-  testMethod?: string;
-  links?: string[];
-  tags?: string[];
-}
-
 interface TaskListProps {
   tasks: Task[];
   onDelete: (id: string, password: string) => Promise<boolean>;
-  initialSearchValue?: string; // Add this line
+  initialSearchValue?: string;
 }
 
-const TaskList: React.FC<TaskListProps> = ({ tasks, onDelete, initialSearchValue = '' }) => { // Add initialSearchValue here
+const TaskList: React.FC<TaskListProps> = ({ tasks, onDelete, initialSearchValue = '' }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [idSearchTerm, setIdSearchTerm] = useState(initialSearchValue); // Update 
+  const [idSearchTerm, setIdSearchTerm] = useState(initialSearchValue);
   const [expandedTask, setExpandedTask] = useState<string | null>(null);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [deletePassword, setDeletePassword] = useState('');
@@ -77,6 +66,11 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onDelete, initialSearchValue
         ? prevTags.filter(t => t !== tag)
         : [...prevTags, tag]
     );
+    
+    // Close tags panel on mobile after selection for better UX
+    if (window.innerWidth <= 768) {
+      setTimeout(() => setShowTagsCard(false), 300);
+    }
   };
 
   const paginatedTags = () => {
@@ -204,6 +198,15 @@ Tags: ${task.tags?.join(', ') || 'No tags provided'}`;
     } catch (error) {
       console.error('Error reporting task:', error);
       alert('An error occurred while reporting the task');
+    }
+  };
+
+  // Mobile-specific handler for closing tags modal
+  const handleTagsClose = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    // Close if clicking the ::before pseudo-element (close button) or the backdrop
+    if (target.classList.contains(styles.tagsCard)) {
+      setShowTagsCard(false);
     }
   };
 
@@ -389,8 +392,14 @@ Tags: ${task.tags?.join(', ') || 'No tags provided'}`;
         {showTagsCard ? 'Hide Tags' : 'Show Tags'}
       </button>
 
-      <div className={`${styles.tagsCard} ${showTagsCard ? styles.open : ''}`}>
-        <div className={styles.tagsCardContent}>
+      <div 
+        className={`${styles.tagsCard} ${showTagsCard ? styles.open : ''}`}
+        onClick={handleTagsClose}
+      >
+        <div 
+          className={styles.tagsCardContent}
+          onClick={(e) => e.stopPropagation()}
+        >
           <h3>Filter by Tags</h3>
           <div className={styles.tagGrid}>
             {paginatedTags().map((tag) => (

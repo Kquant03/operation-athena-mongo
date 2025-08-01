@@ -7,20 +7,25 @@
 
 .title {
   font-size: 32px;
-  color: #00ff00;
+  color: #328abd;
   margin-bottom: 20px;
 }
 
 .error {
   color: #ff0000;
   text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
 }
 
 .button {
   padding: 10px 20px;
   background-color: transparent;
-  color: #00ff00;
-  border: 2px solid #00ff00;
+  color: #328abd;
+  border: 2px solid #328abd;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
@@ -29,8 +34,10 @@
 }
 
 .button:hover {
-  background-color: #00ff00;
+  background-color: #328abd;
   color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px #328abd;
 }
 
 .loading {
@@ -38,4 +45,39 @@
   color: #54a8da;
   font-size: 1.2rem;
   margin-top: 2rem;
+  padding: 2rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .error {
+    font-size: 0.95rem;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+  
+  .button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px #328abd;
+  }
+  
+  .loading {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
 }

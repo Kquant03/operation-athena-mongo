@@ -24,3 +24,26 @@
   background-color: rgba(0, 255, 0, 0.8);
   transform-origin: left center;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .radarContainer {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .radarCircle {
+    border-width: 1.5px;
+  }
+  
+  .radarLine {
+    height: 1.5px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .radarLine {
+    animation: none;
+  }
+}

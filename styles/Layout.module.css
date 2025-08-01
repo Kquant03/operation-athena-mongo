@@ -38,3 +38,14 @@
 .main {
   flex: 1;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .backgroundWrapper {
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+  
+  .backgroundWrapper::before {
+    background-color: rgba(0, 0, 0, 0.92); /* Slightly darker overlay for better readability on mobile */
+  }
+}

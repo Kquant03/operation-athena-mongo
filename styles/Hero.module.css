@@ -1,13 +1,15 @@
 .hero {
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .contentWrapper {
   text-align: center;
   color: white;
+  width: 100%;
 }
 
 .textWrapper {
@@ -36,13 +38,13 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 8vw, 4rem);
   font-weight: bold;
   color: #328abd;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   margin-bottom: 2rem;
 }
 
@@ -64,6 +66,8 @@
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.6);
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .transparentButton:hover {
@@ -71,4 +75,51 @@
   background-color: rgba(0, 0, 0, 0);
   box-shadow: 0 4px 8px #328abd;
   transform: translateY(-2px);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 150px);
+    padding: 0.5rem;
+  }
+  
+  .textWrapper {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .titleWrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+  }
+  
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .transparentButton {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .transparentButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px #328abd;
+  }
 }
