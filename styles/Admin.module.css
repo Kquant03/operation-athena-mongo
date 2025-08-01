@@ -1,0 +1,241 @@
+/* styles/Admin.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 1rem;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px #1d4b66;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px #328abd;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #328abd;
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #328abd;
+  font-size: 1.1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1c6088;
+  box-shadow: 0 0 5px #328abd;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #575656;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.submitButton:hover:not(:disabled) {
+  color: #54a8da;
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px #328abd;
+}
+
+.submitButton:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.success {
+  background-color: rgba(75, 181, 67, 0.1);
+  border: 1px solid rgba(75, 181, 67, 0.3);
+  color: #4bb543;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.success h3 {
+  margin-top: 0;
+  color: #4bb543;
+}
+
+.success p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.errorList {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+.errorList h4 {
+  color: #ff6b6b;
+  margin-bottom: 0.5rem;
+}
+
+.errorList ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.errorList li {
+  color: #ff9999;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.info {
+  background-color: rgba(50, 138, 189, 0.1);
+  border: 1px solid rgba(50, 138, 189, 0.3);
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+.info h3 {
+  color: #54a8da;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.info a {
+  color: #54a8da;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.info a:hover {
+  color: #328abd;
+  text-decoration: underline;
+}
+
+.info code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Share Tech Mono', monospace;
+  color: #54a8da;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    min-height: calc(100vh - 150px);
+    padding: 0.5rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .card:hover {
+    transform: none;
+    box-shadow: 0 4px 6px #1d4b66;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .submitButton {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .submitButton:hover:not(:disabled) {
+    transform: none;
+  }
+  
+  .submitButton:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px #328abd;
+  }
+  
+  .info {
+    padding: 1rem;
+  }
+  
+  .info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .info p {
+    font-size: 0.9rem;
+  }
+}

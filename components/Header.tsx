@@ -5,6 +5,8 @@ import styles from '../styles/Header.module.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Optional: Add admin state management here
+  // const [isAdmin, setIsAdmin] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -38,6 +40,8 @@ const Header = () => {
         <Link href="/tasks" className={styles.navLink} onClick={closeMenu}>Tasks</Link>
         <Link href="/contribute" className={styles.navLink} onClick={closeMenu}>Contribute</Link>
         <Link href="/license" className={styles.navLink} onClick={closeMenu}>MIT License</Link>
+        {/* Add this for easy access during development */}
+        <Link href="/admin/import" className={styles.navLink} onClick={closeMenu}>Import</Link>
       </nav>
     </header>
   );
